@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "pack": "webpack --watch",
+    "pack-production": "NODE_ENV=production webpack",
     "start": "node app.js"
   },
   "dependencies": {
