@@ -4,7 +4,7 @@
         <router-link to="/photos" class="menu_link">Photos</router-link>
         <router-link to="/contact" class="menu_link">Contact</router-link>
         <router-link to="/events" class="menu_link">Events</router-link>
-        <!-- <router-link to="/menus" class="menu_link">Menus</router-link> -->
+        <router-link to="/menus" class="menu_link">Menus</router-link>
         <router-link to="/reccomendations" class="menu_link">Reccomendations</router-link>
         <router-link to="/affiliates" class="menu_link">Affiliates</router-link>
     </menu>

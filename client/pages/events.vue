@@ -5,14 +5,14 @@
         <div class="event_list">
     		<a target="_blank" href="http://www.redbluffbullsale.com/" class="event_item">Red Bluff Bull Sale</a>
     		<span class="event_item">Anderson Sportsman Show</span>
+            <a target="_blank" href="http://www.norcalsportshow.com/" class="event_item">Norcal Boat Sport &amp; RV Show</a>
+            <a target="_blank" href="http://www.exposureshows.com/our-shows/medford.html" class="event_item">JACKSON COUNTY SPORTSMEN'S &amp; OUTDOOR RECREATION SHOW</a>
     		<a target="_blank" href="http://www.sisqfair.com/" class="event_item">Yreka Sportsman Show</a>
     		<a target="_blank" href="http://www.redbluffroundup.com/" class="event_item">Red Bluff Rodeo</a>
-    		<a target="_blank" href="http://www.asparagusfest.com/" class="event_item">Stockton Asparagus Festival</a>
     		<a target="_blank" href="http://www.boatnik.com/" class="event_item">Boatnik</a>
     		<a target="_blank" href="http://www.shastadistrictfair.com/" class="event_item">Shasta District Fair</a>
     		<a target="_blank" href="http://www.mtshastarunners.com/" class="event_item">Mt. Shasta 4th of July Celebration</a>
-    		<span class="event_item">Crescent City 4th of July Celebration</span>
-    		<a target="_blank" href="http://www.co.yamhill.or.us/fair/" class="event_item">Yamhill Monster Truck Show</a>
+    		<a target="_blank" href="http://www.delnorte.org/event/annual-4th-of-july-event/" class="event_item">Crescent City 4th of July Celebration</a>
     		<a target="_blank" href="http://www.jcfairgrounds.com/" class="event_item">Jackson County Fair</a>
     		<a target="_blank" href="http://www.expo.deschutes.org/" class="event_item">Deschutes County Fair</a>
     		<a target="_blank" href="http://dnfairgrounds.com/" class="event_item">Del Norte County Fair</a>

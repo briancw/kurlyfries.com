@@ -1,9 +1,6 @@
 <template>
     <header>
-        <div id="logo">
-            <!-- Southern Oregon Food &amp; Beverage -->
-            S.O.F.A.B.
-        </div>
+        <div id="logo"></div>
         <main-menu></main-menu>
     </header>
 </template>
@@ -20,12 +17,13 @@ export default {
 
 <style lang="scss">
 #logo {
-    // background-image: url('~img/header.png');
+    background-image: url('~img/header.png');
     padding-top: 50px;
     font-size: 52px;
     color: yellow;
     text-align: center;
     width: 100%;
-    height: 150px;
+    // height: 150px;
+    height: 350px;
 }
 </style>
