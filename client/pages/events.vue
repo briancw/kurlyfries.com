@@ -6,7 +6,7 @@
     		<a target="_blank" href="http://www.redbluffbullsale.com/" class="event_item">Red Bluff Bull Sale</a>
     		<span class="event_item">Anderson Sportsman Show</span>
             <a target="_blank" href="http://www.norcalsportshow.com/" class="event_item">Norcal Boat Sport &amp; RV Show</a>
-            <a target="_blank" href="http://www.exposureshows.com/our-shows/medford.html" class="event_item">JACKSON COUNTY SPORTSMEN'S &amp; OUTDOOR RECREATION SHOW</a>
+            <a target="_blank" href="http://www.exposureshows.com/our-shows/medford.html" class="event_item">Jackson County Sportsmen's &amp; Outdoor Recreation Show</a>
     		<a target="_blank" href="http://www.sisqfair.com/" class="event_item">Yreka Sportsman Show</a>
     		<a target="_blank" href="http://www.redbluffroundup.com/" class="event_item">Red Bluff Rodeo</a>
     		<a target="_blank" href="http://www.boatnik.com/" class="event_item">Boatnik</a>
