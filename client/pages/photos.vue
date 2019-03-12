@@ -1,20 +1,23 @@
 <template>
     <div>
     	<h1>Some Images of our Operation</h1>
-    	<img class="gallery left" src="~img/operations/yreka.jpg" alt="A 30ft tent in Yreka, CA.">
-        <img class="gallery right" src="~img/operations/deschutes.jpg" alt="Another 30ft tent in Deschutes County, OR">
-        <br />
-
+    	<img class="gallery left" src="~img/operations/new-trailer.jpg" alt="Kurly Fry concessions trailer">
+        <img class="gallery right" src="~img/operations/sausage-trailer.jpg" alt="Sausage concessions trailer">
+        
         <img class="gallery left" src="~img/operations/red_crew.jpg" alt="One of our crews in new red uniforms">
-        <img class="gallery right" src="~img/operations/tule.jpg" alt="Our popular Mix it up frozen drink stand">
+        <img class="gallery right" src="~img/operations/corndog-trailer.jpg" alt="Corn Dog concession trailer">
         <br />
 
-        <img class="gallery left" src="~img/operations/trailer.jpg" alt="One of our top of the line food trailers">
-        <img class="gallery right" src="~img/operations/yreka2.jpg" alt="One of our standard 20ft tents">
+        <img class="gallery left" src="~img/operations/yreka.jpg" alt="30 foot tent style concessions stand">
+        <img class="gallery right" src="~img/operations/deschutes.jpg" alt="30 foot tent style concessions stand">
+        <br />
+
+        <img class="gallery left" src="~img/operations/kurly-fries.jpg" alt="Fresh Giant Kurly Fries">
+        <img class="gallery right" src="~img/operations/yreka2.jpg" alt="20 foot tent style concessions stand">
         <br />
 
         <div style="text-align: center;">
-        	<img class="gallery center full" src="~img/operations/50ft.png" alt="50 foot food stand at the Jackson County Fair">
+        	<img class="gallery center full" src="~img/operations/50ft.png" alt="50 foot tent style concessions stand">
             <br />
         	<img class="gallery center" src="~img/operations/gus_daryl.jpg" alt="Founder Daryl Whicheloe and Son.">
             <br />
