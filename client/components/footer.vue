@@ -1,6 +1,6 @@
 <template>
     <footer>
-        &copy; 2017 Southern Oregon Food &amp; Beverage
+        &copy; Southern Oregon Food &amp; Beverage
     </footer>
 </template>
 
