@@ -62,7 +62,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .divider {
     height: 2px;
     background-color: #222;

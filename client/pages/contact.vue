@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .contact_page {
     text-align: center;
 }

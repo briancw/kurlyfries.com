@@ -23,7 +23,8 @@ let config = {
             },
             {
                 test: /.css$/,
-                loader: 'style-loader!css-loader!postcss-loader!sass-loader?includePaths[]=./node_modules',
+                // loader: 'style-loader!css-loader!postcss-loader!sass-loader?includePaths[]=./node_modules',
+                loader: 'style-loader!css-loader!postcss-loader!less-loader?includePaths[]=./node_modules',
             },
             {
                 test: /\.vue$/,
@@ -31,7 +32,8 @@ let config = {
                 options: {
                     loaders: {
                         js: 'babel-loader',
-                        scss: 'style-loader!css-loader!sass-loader?includePaths[]=./node_modules',
+                        // scss: 'style-loader!css-loader!sass-loader?includePaths[]=./node_modules',
+                        less: 'style-loader!css-loader!less-loader?includePaths[]=./node_modules',
                         // scss: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader!sass-loader?includePaths[]=./node_modules'}),
                     },
                     postcss: [
@@ -42,7 +44,7 @@ let config = {
                 },
             },
             // {
-            //     test: /\.scss$/,
+            //     test: /\.less$/,
             //     // loader: 'style-loader!css-loader!sass-loader?includePaths[]=./node_modules',
             //     loader: ExtractTextPlugin.extract({fallback: 'style-loader', use: 'css-loader?includePaths[]=./node_modules!sass-loader?includePaths[]=./node_modules'}),
             // },

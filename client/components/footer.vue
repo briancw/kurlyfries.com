@@ -10,10 +10,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../styles/mixins.scss';
+<style lang="less">
+@import '../styles/mixins.less';
 footer {
-    @include crimson;
+    .crimson();
     border-top: 2px solid #222222;
     background-color: #f7f2df;
     font-size: 24px;

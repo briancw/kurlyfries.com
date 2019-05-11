@@ -15,7 +15,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 #logo {
     background-image: url('~img/header.png');
     padding-top: 50px;

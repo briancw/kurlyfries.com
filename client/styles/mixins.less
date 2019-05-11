@@ -1,34 +1,34 @@
-@mixin _roboto {
+._roboto() {
     font-family: 'Roboto', sans-serif;
     font-style: normal;
 }
 
-@mixin _crimson {
+._crimson() {
     font-family: 'Crimson Text';
     font-style: normal;
 }
 
-@mixin roboto {
-    @include _roboto;
+.roboto() {
+    ._roboto();
     font-weight: 400;
 }
 
-@mixin roboto-light {
-    @include _roboto;
+.roboto-light() {
+    ._roboto();
     font-weight: 300;
 }
 
-@mixin roboto-medium {
-    @include _roboto;
+.roboto-medium() {
+    ._roboto();
     font-weight: 500;
 }
 
-@mixin roboto-bold {
-    @include _roboto;
+.roboto-bold() {
+    ._roboto();
     font-weight: 700;
 }
 
-@mixin crimson {
-    @include _crimson;
+.crimson() {
+    ._crimson();
     font-weight: 400;
 }

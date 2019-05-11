@@ -15,13 +15,13 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../styles/mixins.scss';
+<style lang="less">
+@import '../styles/mixins.less';
 .menu {
     text-align: center;
 
     .menu_link {
-        @include roboto;
+        .roboto();
         color: #fff;
         font-size: 24px;
         text-decoration: none;

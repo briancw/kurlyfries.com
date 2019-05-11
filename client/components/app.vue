@@ -22,9 +22,9 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../styles/_main.scss';
-@import '../styles/mixins.scss';
+<style lang="less">
+@import '../styles/_main.less';
+@import '../styles/mixins.less';
 
 body {
     background-color: #054278;
@@ -43,7 +43,7 @@ body {
         font-family: Tahoma;
 
         h1 {
-            @include crimson;
+            .crimson();
             border-bottom: 2px solid #222222;
             text-align: center;
             font-size: 56px;

@@ -31,7 +31,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="less">
 .gallery {
     width: 48%;
     float: left;
