@@ -5,7 +5,7 @@
             Southern Oregon Food &amp; Beverage is the finest provider of fair food in Southern Oregon and Northern California.
             With over 30 years of experience, our hard working team provides great food at a great price!
         </p>
-        <img class="home_trailer_img" src="~img/operations/sausage-trailer.jpg" alt="Our most versatile trailer"/>
+        <img class="home_trailer_img" src="~img/operations/new-trailer.jpg" alt="Our most versatile trailer"/>
         <p>
             Over the past 30 years we've sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.
             From our enormous jumbo burritos, to deep fried candy bars and funnel cakes, we have the flexibility to serve the perfect menu at any event.
