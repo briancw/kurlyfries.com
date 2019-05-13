@@ -1,11 +1,13 @@
 <template>
-    <div class="page_wrapper">
-        <main-header></main-header>
-        <div class="content_wrapper">
-            <router-view></router-view>
-            <div style="height: 30px; clear: both;"></div>
+    <div id="app">
+        <div class="page_wrapper">
+            <main-header></main-header>
+            <div class="content_wrapper">
+                <router-view></router-view>
+                <div style="height: 30px; clear: both;"></div>
+            </div>
+            <main-footer></main-footer>
         </div>
-        <main-footer></main-footer>
     </div>
 </template>
 
@@ -23,7 +25,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../styles/_main.less';
+@import '../styles/reset.less';
 @import '../styles/mixins.less';
 
 body {
@@ -66,5 +68,4 @@ body {
         }
     }
 }
-
 </style>

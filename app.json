@@ -1,7 +1,0 @@
-{
-    "apps": [{
-        "name": "kurlyfries",
-        "script": "npm",
-        "args": "run start"
-    }]
-}

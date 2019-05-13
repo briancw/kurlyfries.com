@@ -6,9 +6,9 @@
 </template>
 
 <script>
-import mainMenu from './menu.vue'
+import mainMenu from '../components/menu.vue'
 export default {
-    name: 'header',
+    name: 'default-header',
     components: {
         mainMenu,
     },
@@ -17,13 +17,12 @@ export default {
 
 <style lang="less">
 #logo {
-    background-image: url('~img/header.png');
+    background-image: url('/img/header.png');
     padding-top: 50px;
     font-size: 52px;
     color: yellow;
     text-align: center;
     width: 100%;
-    // height: 150px;
     height: 350px;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
-    <div class="reccomendations_page">
-        <h1>Reccomendations</h1>
+    <div class="recommendations_page">
+        <h1>Recommendations</h1>
 
-        <div class="reccomendation">
+        <div class="recommendation">
             <h3>Cliff Munson</h3>
         	<!-- <h3>January 2011</h3> -->
         	<p>Southern Oregon Food &amp; Beverage (SOFAB) is one of our most treasured professional concessionaires. 2010 was my first fair as CEO here in Yreka and I can say that Daryl went out of his way to help me, both learn about fair concessions and by showing me what a true partnership is for our fair.</p>
@@ -26,7 +26,7 @@
         </div>
         <div class="divider"></div>
 
-        <div class="reccomendation">
+        <div class="recommendation">
             <h3>Alan Westhoff</h3>
         	<!-- <h3>January 2011</h3> -->
         	<p>I became a Fair Manager in Oregon (Josephine County-Grants Pass) in 1989 and worked with Daryl Whicheloe of Southern Oregon Food &amp; Beverage for 17 years thru 2005. I semi-retired and moved to the Portland Area and became the Manager of the Yamhill County Fair in McMinnville, Oregon.</p>
@@ -42,7 +42,7 @@
         </div>
         <div class="divider"></div>
 
-        <div class="reccomendation">
+        <div class="recommendation">
             <h3>Ross Rogers</h3>
         	<!-- <h3>January 2011</h3> -->
         	<p>Southern Oregon Food &amp; Beverage owned and operated by Daryl Whicheloe has been a staple at the Deschutes County Fair and Rodeo in Redmond, Oregon for the past 25 years. Southern Oregon Food &amp; Beverage Booth #1 is located in the heart of our Food Court where only 10 of our select food concessionaires are located. The second booth is the only food both located in front of our open class / 4H barns to accommodate those who have animals here during fair time and for the fairgoers visiting that area.</p>
@@ -58,7 +58,7 @@
 
 <script>
 export default {
-    name: 'reccomendations',
+    name: 'recommendations',
 }
 </script>
 
@@ -67,7 +67,7 @@ export default {
     height: 2px;
     background-color: #222;
 }
-.reccomendation {
+.recommendation {
     padding: 50px 0px;
 }
 </style>

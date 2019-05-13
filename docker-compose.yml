@@ -1,0 +1,12 @@
+version: "3"
+services:
+    haproxy:
+        image: haproxy
+        container_name: haproxy-proxy
+        # network_mode: "host" # Only use when running on Linux!
+        ports:
+            - 443:443
+            - 80:80
+        volumes:
+            - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+            - ./certs:/etc/ssl/
