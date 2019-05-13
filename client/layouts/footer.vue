@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="footer">
         &copy; Southern Oregon Food &amp; Beverage
     </footer>
 </template>
@@ -12,7 +12,8 @@ export default {
 
 <style lang="less">
 @import '../styles/mixins.less';
-footer {
+
+.footer {
     .crimson();
     border-top: 2px solid #222222;
     background-color: #f7f2df;
