@@ -49,14 +49,6 @@
         },
     ]
 
-    function autoParagraphText(inputText) {
-        let outputText = ''
-        inputText.split('\n').forEach((paragraph) => {
-            outputText += `<p>${paragraph}</p>`
-        })
-        return outputText
-    }
-
     function lightbox(img) {
         console.log(img)
         lightboxImage = img
@@ -210,8 +202,8 @@
     
         .closeButton {
             position: absolute;
-            top: -20px;
-            right: -20px;
+            top: -25px;
+            right: -25px;
             background-color: #fff;
             width: 40px;
             height: 40px;
@@ -221,6 +213,7 @@
             color: #000;
             font-size: 30px;
             cursor: pointer;
+            outline: 2px solid #000;
         }
     }
 }

@@ -1,6 +1,9 @@
 <script>
     import './styles/reset.less'
     import {Router, Route} from 'svelte-navigator'
+    import {GoogleAnalytics} from '@beyonk/svelte-google-analytics'
+
+    // Pages
     import Menu from './components/menu.svelte'
     import HomePage from './pages/home.svelte'
     import GalleryPage from './pages/gallery.svelte'
@@ -12,6 +15,7 @@
     import FourOhFourPage from './pages/fourohfour.svelte'
 </script>
 
+<GoogleAnalytics properties={['UA-28431964-4']} />
 <main>
     <div class="page_wrapper">
         <Menu />

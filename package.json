@@ -14,6 +14,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@beyonk/svelte-google-analytics": "^2.2.0",
         "eslint": "^8.13.0",
         "eslint-config-brian": "^1.0.8",
         "eslint-plugin-svelte3": "^3.4.1",
