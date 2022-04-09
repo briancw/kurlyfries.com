@@ -85,6 +85,7 @@
         <div class="lightboxInner">
             <img src={lightboxImage} class="lightboxImage" />
             <div class="closeButton">x</div>
+            <a href={lightboxImage} target="__blank" class="fullscreenButton">View Fullscreen >></a>
         </div>
     </div>
 </main>
@@ -109,7 +110,7 @@
         text-align: center;
         color: #fff;
         width: 100%;
-        font-size: 72px;
+        font-size: 5vw;
         text-shadow: 3px 3px 0px #000;
     }
 }
@@ -117,6 +118,14 @@
 .homeGallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+
+    @media screen and (max-width: 720px) {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
 
     .galleryItem {
         // min-height: 300px;
@@ -135,6 +144,10 @@
             cursor: pointer;
             .galleryItemImage {
                 transform: scale(1.1);
+             
+                @media screen and (max-width: 720px) {
+                    transform: none;
+                }
             }
         }
         
@@ -157,6 +170,14 @@
             background-color: rgba(0, 0, 0, 0.5);
             padding: 10%;
             font-size: 24px;
+
+            @media screen and (max-width: 1024px) {
+                font-size: 18px;
+            }
+
+            @media screen and (max-width: 720px) {
+                padding: 5%;
+            }
         }
         
         &:after {
@@ -190,10 +211,15 @@
     .lightboxInner {
         position: absolute;
         width: 90%;
-        border: 10px solid #fff;
+        outline: 10px solid #fff;
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
+
+        @media screen and (max-width: 1024px) {
+            width: 95%;
+            outline-width: 5px;
+        }
         
         .lightboxImage {
             width: 100%;
@@ -214,6 +240,21 @@
             font-size: 30px;
             cursor: pointer;
             outline: 2px solid #000;
+
+            @media screen and (max-width: 1024px) {
+                right: 0px;
+                top: -50px;
+            }
+        }
+
+        .fullscreenButton {
+            color: #fff;
+            display: block;
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            font-size: 24px;
+            text-shadow: 2px 2px 0px #000;
         }
     }
 }

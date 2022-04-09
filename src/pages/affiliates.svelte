@@ -1,5 +1,5 @@
-<main class="affiliates_page">
-    <h1>Affiliates</h1>
+<main class="affiliatesPage">
+    <h1 class="affiliatesTitle">Affiliates</h1>
 
     <div class="affiliate">
         <a href="http://taylorsausage.com" target="_blank" class="affiliate_link">TaylorSausage.com</a>
@@ -25,8 +25,14 @@
 </main>
 
 <style lang="less">
-.affiliates_page {
+.affiliatesPage {
     text-align: center;
+    margin-top: 50px;
+    color: #fff;
+
+    .affiliatesTitle {
+        padding: 25px 0px;
+    }
 
     .affiliate {
         margin-bottom: 20px;

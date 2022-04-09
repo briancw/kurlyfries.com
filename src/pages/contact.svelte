@@ -1,5 +1,5 @@
-<main class="contact_page">
-        <h1>Contact Us</h1>
+<main class="contactPage">
+        <h1 class="contactTitle">Contact Us</h1>
         You can reach Daryl and Kristen by phone at (541) 941-9660
         <br />
         by email at daryl@kurlyfries.com
@@ -8,7 +8,13 @@
 </main>
 
 <style lang="less">
-.contact_page {
+.contactPage {
+    margin-top: 50px;
     text-align: center;
+    color: #fff;
+
+    .contactTitle {
+        padding: 25px 0px;
+    }
 }
 </style>
