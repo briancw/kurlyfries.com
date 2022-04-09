@@ -48,7 +48,7 @@
     }
 </script>
 
-<main class="gallery_page">
+<main class="galleryPage">
     <section class="homeGallery">
         {#each images as image, imageIndex}
             <div class="galleryItem" class:double={image.double} on:click={() => lightbox(image.src)}>
@@ -73,6 +73,10 @@
 </main>
 
 <style lang="less">
+.galleryPage {
+    margin-top: 50px;
+}
+
 .homeGallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));

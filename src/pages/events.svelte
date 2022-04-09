@@ -1,238 +1,171 @@
+<script>
+const events = [
+    // {
+    //     name: 'Red Bluff Bull Sale',
+    //     website: 'http://www.redbluffbullsale.com/',
+    //     websiteDisplay: 'redbluffbullsale.com',
+    //     date: '',
+    // },
+    // {
+    //     name: 'Norcal Boat Sport & RV Show',
+    //     website: 'http://www.norcalsportshow.com/',
+    //     websiteDisplay: 'norcalsportshow.com',
+    //     date: '',
+    // },
+    // {
+    //     name: 'Jackson County Sportsmen\'s & Outdoor Recreation Show',
+    //     website: 'http://www.exposureshows.com/our-shows/medford.html',
+    //     websiteDisplay: 'exposureshows.com',
+    //     date: '',
+    // },
+    // {
+    //     name: 'Yreka Sportsman Show',
+    //     website: 'http://www.sisqfair.com/',
+    //     websiteDisplay: 'sisqfair.com',
+    //     date: '',
+    // },
+    {
+        name: 'Red Bluff Rodeo',
+        website: 'https://www.redbluffroundup.com/',
+        websiteDisplay: 'RedBluffRoundup.com',
+        date: 'April 15th to April 17th',
+    },
+    {
+        name: 'Redding Rodeo',
+        website: 'https://www.reddingrodeo.com/',
+        websiteDisplay: 'ReddingRodeo.com',
+        date: '',
+    },
+    {
+        name: 'Boatnik',
+        website: 'https://www.boatnik.com/',
+        websiteDisplay: 'boatnik.com',
+        date: '',
+    },
+    {
+        name: 'Shasta District Fair',
+        website: 'https://www.shastadistrictfairandeventcenter.com/',
+        websiteDisplay: 'ShastaDistrictFairAndEventCenter.com',
+        date: '',
+    },
+    // {
+    //     name: 'Mt. Shasta 4th of July Celebration',
+    //     website: 'http://www.mtshastarunners.com/',
+    //     websiteDisplay: 'mtshastarunners.com',
+    //     date: '',
+    // },
+    {
+        name: 'Crescent City 4th of July Celebration',
+        website: 'http://www.delnorte.org/event/annual-4th-of-july-event/',
+        websiteDisplay: 'delnorte.org',
+        date: '',
+    },
+    {
+        name: 'Jackson County Fair',
+        website: 'https://attheexpo.com/fair/',
+        websiteDisplay: 'AtTheExpo.com',
+        date: '',
+    },
+    {
+        name: 'Deschutes County Fair',
+        website: 'http://www.expo.deschutes.org/',
+        websiteDisplay: 'expo.deschutes.org',
+        date: '',
+    },
+    {
+        name: 'Del Norte County Fair',
+        website: 'https://www.dnfair.org/',
+        websiteDisplay: 'DNFair.org',
+        date: '',
+    },
+    // {
+    //     name: 'Yamhill County Fair',
+    //     website: 'http://www.co.yamhill.or.us/fair/',
+    //     websiteDisplay: 'co.yamhill.or.us',
+    //     date: '',
+    // },
+    {
+        name: 'Siskiyou Golden Fair',
+        website: 'http://www.sisqfair.com/',
+        websiteDisplay: 'sisqfair.com',
+        date: '',
+    },
+    {
+        name: 'Humboldt County Fair',
+        website: 'http://www.humboldtcountyfair.org/',
+        websiteDisplay: 'HumboldtCountyFair.org',
+        date: '',
+    },
+    {
+        name: 'Josephine County Fair',
+        website: 'https://www.josephinecountyfairgrounds.com/',
+        websiteDisplay: 'JosephineCountyFairgrounds.com',
+        date: '',
+    },
+    // {
+    //     name: 'Lake County Fair',
+    //     website: 'http://www.lakecountyfair.com/',
+    //     websiteDisplay: 'lakecountyfair.com',
+    //     date: '',
+    // },
+    {
+        name: 'Inter Mountain Fair',
+        website: 'http://www.inter-mountainfair.com/',
+        websiteDisplay: 'inter-mountainfair.com',
+        date: '',
+    },
+    {
+        name: 'Tulelake Butte Valley Fair',
+        website: 'http://www.tbvfair.com/',
+        websiteDisplay: 'tbvfair.com',
+        date: '',
+    },
+    {
+        name: 'Mendocino County Fair',
+        website: 'http://www.mendocountyfair.com/',
+        websiteDisplay: 'mendocountyfair.com',
+        date: '',
+    },
+    {
+        name: 'Tehama District Fair',
+        website: 'http://www.tehamadistrictfair.com/',
+        websiteDisplay: 'TehamaDistrictFair.com',
+        date: '',
+    },
+    {
+        name: 'Central Washington State Fair',
+        website: 'https://www.statefairpark.org/',
+        websiteDisplay: 'StateFairPark.org',
+        date: '',
+    },
+    {
+        name: 'River Banks Wine & Cheese Festival',
+        website: 'http://www.riverbankcheeseandwine.org/',
+        websiteDisplay: 'riverbankcheeseandwine.org',
+        date: '',
+    },
+]
+</script>
+
 <main class="eventsPage">
 	<h1 class="eventsTitle">Find us at these events this year</h1>
 
 	<div class="events">
-		<!-- <div class="event">
-			<div class="eventName">
-				Red Bluff Bull Sale
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.redbluffbullsale.com/" class="eventLink">
-				redbluffbullsale.com
-			</a>
-		</div>
+		{#each events as event}
 		<div class="event">
 			<div class="eventName">
-				Norcal Boat Sport &amp; RV Show
+				{event.name}
 			</div>
+			{#if event.date}
 			<div class="eventDate">
+				{event.date}
 			</div>
-			<a target="_blank" href="http://www.norcalsportshow.com/" class="eventLink">
-				norcalsportshow.com
+			{/if}
+			<a target="_blank" href={event.website} class="eventLink">
+				{event.websiteDisplay}
 			</a>
 		</div>
-		<div class="event">
-			<div class="eventName">
-				Jackson County Sportsmen's &amp; Outdoor Recreation Show
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.exposureshows.com/our-shows/medford.html" class="eventLink">
-				exposureshows.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Yreka Sportsman Show
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.sisqfair.com/" class="eventLink">
-				sisqfair.com
-			</a>
-		</div> -->
-		<div class="event">
-			<div class="eventName">
-				Red Bluff Rodeo
-			</div>
-			<div class="eventDate">
-				April 15th to April 17th
-			</div>
-			<a target="_blank" href="http://www.redbluffroundup.com/" class="eventLink">
-				redbluffroundup.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Boatnik
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.boatnik.com/" class="eventLink">
-				boatnik.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Shasta District Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.shastadistrictfair.com/" class="eventLink">
-				shastadistrictfair.com
-			</a>
-		</div>
-		<!-- <div class="event">
-			<div class="eventName">
-				Mt. Shasta 4th of July Celebration
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.mtshastarunners.com/" class="eventLink">
-				mtshastarunners.com
-			</a>
-		</div> -->
-		<div class="event">
-			<div class="eventName">
-				Crescent City 4th of July Celebration
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.delnorte.org/event/annual-4th-of-july-event/" class="eventLink">
-				delnorte.org
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Jackson County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.jcfairgrounds.com/" class="eventLink">
-				jcfairgrounds.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Deschutes County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.expo.deschutes.org/" class="eventLink">
-				expo.deschutes.org
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Del Norte County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://dnfairgrounds.com/" class="eventLink">
-				irgrounds.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Yamhill County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.co.yamhill.or.us/fair/" class="eventLink">
-				co.yamhill.or.us
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Siskiyou Golden Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.sisqfair.com/" class="eventLink">
-				sisqfair.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Humboldt County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.humboldtcountyfair.org/" class="eventLink">
-				humboldtcountyfair.org
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Josephine County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.co.josephine.or.us/SectionIndex.asp?SectionID=146" class="eventLink">
-				co.josephine.or.u
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Lake County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.lakecountyfair.com/" class="eventLink">
-				lakecountyfair.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Inter Mountain Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.inter-mountainfair.com/" class="eventLink">
-				inter-mountainfair.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Tulelake Butte Valley Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.tbvfair.com/" class="eventLink">
-				tbvfair.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Mendocino County Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.mendocountyfair.com/" class="eventLink">
-				mendocountyfair.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Tehama District Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.tehamadistrictfair.com/" class="eventLink">
-				tehamadistrictfair.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				Central Washington State Fair
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.fairfun.com/fair/" class="eventLink">
-				fairfun.com
-			</a>
-		</div>
-		<div class="event">
-			<div class="eventName">
-				River Banks Wine &amp; Cheese Festival
-			</div>
-			<div class="eventDate">
-			</div>
-			<a target="_blank" href="http://www.riverbankcheeseandwine.org/" class="eventLink">
-				riverbankcheeseandwine.org
-			</a>
-		</div>
+		{/each}
 	</div>
 </main>
 

@@ -8,11 +8,11 @@
         {
             src: '/img/operations/new-trailer.jpg',
             double: true,
-            text: [
-                'Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!',
-                'Over the past 30 years we\'ve sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.',
-                'From our enormous jumbo burritos, to deep fried candy bars and funnel cakes, we have the flexibility to serve the perfect menu at any event.',
-            ],
+            // text: [
+            //     'Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!',
+            //     'Over the past 30 years we\'ve sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.',
+            //     'From our enormous jumbo burritos, to deep fried candy bars and funnel cakes, we have the flexibility to serve the perfect menu at any event.',
+            // ],
         },
         {
             src: '/img/operations/sausage-trailer.jpg',
@@ -35,11 +35,11 @@
         {
             src: '/img/operations/yreka2.jpg',
             double: true,
-            text: [
-                'With a large arrangement of tents and trailers, we are able to serve at anything from state fairs to small festivals.',
-                'If you\'re interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.',
-                'We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).',
-            ],
+            // text: [
+            //     'With a large arrangement of tents and trailers, we are able to serve at anything from state fairs to small festivals.',
+            //     'If you\'re interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.',
+            //     'We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).',
+            // ],
         },
         {
             src: '/img/operations/50ft.png',
@@ -63,9 +63,19 @@
 <main>
     <div class="headerSection">
         <img src={headerImg} class="headerImage" />
-        <h1 class="headerTitle">Southern Oregon Food &amp; Beverage</h1>
+        <h1 class="headerTitle">Southern Oregon Food & Beverage</h1>
     </div>
     
+    <div class="homeText">
+        <h2>The Best in the West</h2>
+        <p>Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!</p>
+        <!-- <p>Over the past 30 years we\'ve sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.</p> -->
+        <p>With our iconic food stands, a flexible crew, and years of experience, we are able to provide concessions for events of any size.</p>
+        <!-- <p>If you're interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.</p> -->
+        <p>We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).</p>
+        <p>Darly is currently serving as the President of the National Independent Concessionaires Association</p>
+    </div>
+
     <section class="homeGallery">
         {#each images as image, imageIndex}
             <div class="galleryItem" class:double={image.double} on:click={() => lightbox(image.src)}>
@@ -111,7 +121,19 @@
         color: #fff;
         width: 100%;
         font-size: 5vw;
-        text-shadow: 3px 3px 0px #000;
+        text-shadow: 6px 6px 10px #000;
+    }
+}
+
+.homeText {
+    background-color: #02213c;
+    padding: 50px;
+    line-height: 2em;
+    font-size: 1.5em;
+    color: #fff;
+
+    h2 {
+        text-align: center;
     }
 }
 
@@ -248,13 +270,21 @@
         }
 
         .fullscreenButton {
-            color: #fff;
+            color: #000;
             display: block;
             position: absolute;
             right: 10px;
-            bottom: 10px;
+            bottom: -25px;
             font-size: 24px;
-            text-shadow: 2px 2px 0px #000;
+            // text-shadow: 2px 2px 0px #000;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 5px 15px;
+
+            @media screen and (max-width: 1024px) {
+                right: 0px;
+                bottom: -60px;
+            }
         }
     }
 }
