@@ -1,7 +1,71 @@
 <script>
     import headerImg from '../img/new-trailer.jpg'
-    // import contentImage from '../img/operations/kurly-fries.jpg'
-    // import contentImage2 from '../img/operations/red-crew.jpg'
+    
+    let lightboxShow = false
+    let lightboxImage = ''
+
+    const images = [
+        {
+            src: '/img/operations/new-trailer.jpg',
+            double: true,
+            text: [
+                'Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!',
+                'Over the past 30 years we\'ve sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.',
+                'From our enormous jumbo burritos, to deep fried candy bars and funnel cakes, we have the flexibility to serve the perfect menu at any event.',
+            ],
+        },
+        {
+            src: '/img/operations/sausage-trailer.jpg',
+        },
+        {
+            src: '/img/operations/red_crew.jpg',
+        },
+        {
+            src: '/img/operations/corndog-trailer.jpg',
+        },
+        {
+            src: '/img/operations/yreka.jpg',
+        },
+        {
+            src: '/img/operations/deschutes.jpg',
+        },
+        {
+            src: '/img/operations/kurly-fries.jpg',
+        },
+        {
+            src: '/img/operations/yreka2.jpg',
+            double: true,
+            text: [
+                'With a large arrangement of tents and trailers, we are able to serve at anything from state fairs to small festivals.',
+                'If you\'re interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.',
+                'We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).',
+            ],
+        },
+        {
+            src: '/img/operations/50ft.png',
+        },
+        {
+            src: '/img/operations/gus_daryl.jpg',
+        },
+    ]
+
+    function autoParagraphText(inputText) {
+        let outputText = ''
+        inputText.split('\n').forEach((paragraph) => {
+            outputText += `<p>${paragraph}</p>`
+        })
+        return outputText
+    }
+
+    function lightbox(img) {
+        console.log(img)
+        lightboxImage = img
+        lightboxShow = true
+    }
+
+    function lightboxHide(e) {
+        lightboxShow = false
+    }
 </script>
 
 <main>
@@ -10,31 +74,27 @@
         <h1 class="headerTitle">Southern Oregon Food &amp; Beverage</h1>
     </div>
     
-    <section class="homeContent">
-        <div class="gridLeft">
-            <div class="gridImage imageLeft"></div>
-        </div>
-        <div class="gridRight">
-            <div class="gridImage imageRight"></div>
-            <div class="homeContentText">
-                <p>
-                    Southern Oregon Food &amp; Beverage is the finest provider of fair food in Southern Oregon and Northern California.
-                    With over 30 years of experience, our hard working team provides great food at a great price!
-                </p>
-                <p>
-                    Over the past 30 years we've sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.
-                    From our enormous jumbo burritos, to deep fried candy bars and funnel cakes, we have the flexibility to serve the perfect menu at any event.
-                </p>
-                <p>
-                    With a large arrangement of tents and trailers, we are able to serve at anything from state fairs to small festivals.
-                    If you're interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.
-                </p>
-                <p>
-                    We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).
-                </p>
+    <section class="homeGallery">
+        {#each images as image, imageIndex}
+            <div class="galleryItem" class:double={image.double} on:click={() => lightbox(image.src)}>
+                <img src={image.src} class="galleryItemImage" />
+                {#if image.text}
+                <div class="galleryText">
+                    {#each image.text as text}
+                        <p>{text}</p>
+                    {/each}
+                </div>
+                {/if}
             </div>
-        </div>
+        {/each}
     </section>
+
+    <div class="lightbox" class:show={lightboxShow} on:click|stopPropagation={lightboxHide}>
+        <div class="lightboxInner">
+            <img src={lightboxImage} class="lightboxImage" />
+            <div class="closeButton">x</div>
+        </div>
+    </div>
 </main>
 
 <style lang="less">
@@ -42,16 +102,18 @@
     display: block;
     min-height: 80%;
     position: relative;
-    // background-image: url('{headerImg}');
+    max-height: 90vh;
 
     .headerImage {
         width: 100%;
         min-height: 80%;
         display: block;
     }
+
     .headerTitle {
         position: absolute;
         top: 50%;
+        transform: translateY(-50%);
         text-align: center;
         color: #fff;
         width: 100%;
@@ -59,37 +121,107 @@
         text-shadow: 3px 3px 0px #000;
     }
 }
-.homeContent {
-    display: flex;
 
-    .gridLeft, .gridRight {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        width: 50%;
-        position: relative;
-    }
-    .gridImage {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 100%;
+.homeGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+
+    .galleryItem {
+        // min-height: 300px;
         width: 100%;
-        z-index: 50;
-        position: absolute;
+        aspect-ratio: 1;
+        position: relative;
+        overflow: hidden;
+        user-select: none;
+        
+        &.double {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            .galleryItemImage {
+                transform: scale(1.1);
+            }
+        }
+        
+        .galleryItemImage {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1;
+            transition: transform 0.5s;
+        }
+
+        .galleryText {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10%;
+            font-size: 24px;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 90;
+            box-shadow: inset 0px 0px 10px 0px #000;
+        }
     }
-    .imageLeft {
-        background-image: url('/img/operations/red_crew.jpg');
-    }
-    .imageRight {
-        background-image: url('/img/operations/kurly-fries.jpg');
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+    user-select: none;
+
+    &.show {
+        display: block;
     }
 
-    .homeContentText {
-        padding: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
-        z-index: 60;
+    .lightboxInner {
+        position: absolute;
+        width: 90%;
+        border: 10px solid #fff;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        
+        .lightboxImage {
+            width: 100%;
+            display: block;
+        }
+    
+        .closeButton {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background-color: #fff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 100px;
+            color: #000;
+            font-size: 30px;
+            cursor: pointer;
+        }
     }
 }
 </style>

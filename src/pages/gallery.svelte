@@ -1,61 +1,178 @@
 <script>
-    import img1 from '../img/operations/new-trailer.jpg'
-    import img2 from '../img/operations/sausage-trailer.jpg'
-    import img3 from '../img/operations/red_crew.jpg'
-    import img4 from '../img/operations/corndog-trailer.jpg'
-    import img5 from '../img/operations/yreka.jpg'
-    import img6 from '../img/operations/deschutes.jpg'
-    import img7 from '../img/operations/kurly-fries.jpg'
-    import img8 from '../img/operations/yreka2.jpg'
-    import img9 from '../img/operations/50ft.png'
-    import img10 from '../img/operations/gus_daryl.jpg'
+    let lightboxShow = false
+    let lightboxImage = ''
+
+    const images = [
+        {
+            src: '/img/operations/new-trailer.jpg',
+            // double: true,
+        },
+        {
+            src: '/img/operations/sausage-trailer.jpg',
+        },
+        {
+            src: '/img/operations/red_crew.jpg',
+        },
+        {
+            src: '/img/operations/corndog-trailer.jpg',
+        },
+        {
+            src: '/img/operations/yreka.jpg',
+        },
+        {
+            src: '/img/operations/deschutes.jpg',
+        },
+        {
+            src: '/img/operations/kurly-fries.jpg',
+        },
+        {
+            src: '/img/operations/yreka2.jpg',
+            // double: true,
+        },
+        {
+            src: '/img/operations/50ft.png',
+        },
+        {
+            src: '/img/operations/gus_daryl.jpg',
+        },
+    ]
+
+    function lightbox(img) {
+        console.log(img)
+        lightboxImage = img
+        lightboxShow = true
+    }
+
+    function lightboxHide(e) {
+        lightboxShow = false
+    }
 </script>
 
 <main class="gallery_page">
-    <h1>Some Images of our Operation</h1>
-    <img class="gallery left" src={img1} alt="Kurly Fry concessions trailer">
-    <img class="gallery right" src={img2} alt="Sausage concessions trailer">
-    
-    <img class="gallery left" src={img3} alt="One of our crews in new red uniforms">
-    <img class="gallery right" src={img4} alt="Corn Dog concession trailer">
-    <br />
+    <section class="homeGallery">
+        {#each images as image, imageIndex}
+            <div class="galleryItem" class:double={image.double} on:click={() => lightbox(image.src)}>
+                <img src={image.src} class="galleryItemImage" />
+                {#if image.text}
+                <div class="galleryText">
+                    {#each image.text as text}
+                        <p>{text}</p>
+                    {/each}
+                </div>
+                {/if}
+            </div>
+        {/each}
+    </section>
 
-    <img class="gallery left" src={img5} alt="30 foot tent style concessions stand">
-    <img class="gallery right" src={img6} alt="30 foot tent style concessions stand">
-    <br />
-
-    <img class="gallery left" src={img7} alt="Fresh Giant Kurly Fries">
-    <img class="gallery right" src={img8} alt="20 foot tent style concessions stand">
-    <br />
-
-    <div style="text-align: center;">
-        <img class="gallery center full" src={img9} alt="50 foot tent style concessions stand">
-        <br />
-        <img class="gallery center" src={img10} alt="Founder Daryl Whicheloe and Son.">
-        <br />
+    <div class="lightbox" class:show={lightboxShow} on:click|stopPropagation={lightboxHide}>
+        <div class="lightboxInner">
+            <img src={lightboxImage} class="lightboxImage" />
+            <div class="closeButton">x</div>
+        </div>
     </div>
 </main>
 
 <style lang="less">
-.gallery {
-    width: 50%;
-    float: left;
-    margin-bottom: 20px;
+.homeGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
 
-    &.left {
-        margin-right: 2%;
-    }
-
-    &.right {
-        margin-left: 2%;
-    }
-
-    &.center {
-        float: none;
-    }
-
-    &.full {
+    .galleryItem {
+        // min-height: 300px;
         width: 100%;
+        aspect-ratio: 1;
+        position: relative;
+        overflow: hidden;
+        user-select: none;
+        
+        &.double {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        
+        &:hover {
+            cursor: pointer;
+            .galleryItemImage {
+                transform: scale(1.1);
+            }
+        }
+        
+        .galleryItemImage {
+            display: block;
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1;
+            transition: transform 0.5s;
+        }
+
+        .galleryText {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10%;
+            font-size: 24px;
+        }
+        
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 90;
+            box-shadow: inset 0px 0px 10px 0px #000;
+        }
+    }
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+    user-select: none;
+
+    &.show {
+        display: block;
+    }
+
+    .lightboxInner {
+        position: absolute;
+        width: 90%;
+        border: 10px solid #fff;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        
+        .lightboxImage {
+            width: 100%;
+            display: block;
+        }
+    
+        .closeButton {
+            position: absolute;
+            top: -20px;
+            right: -20px;
+            background-color: #fff;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 35px;
+            border-radius: 100px;
+            color: #000;
+            font-size: 30px;
+            cursor: pointer;
+        }
     }
 }
 </style>

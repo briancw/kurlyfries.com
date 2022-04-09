@@ -50,34 +50,6 @@
 <style lang="less">
 :global(body) {
     background-color: #054278;
-}
-
-.content_wrapper {
-    // background-color: #f7f2df;
-    // padding: 10px 30px;
-    font-size: 16px;
     font-family: "Open Sans";
-
-    h1 {
-        border-bottom: 2px solid #222222;
-        text-align: center;
-        font-size: 56px;
-        font-variant: small-caps;
-        margin-bottom: 10px;
-
-        @media screen and (max-width: 900px) {
-            font-size: 40px;
-        }
-
-        @media screen and (max-width: 360px) {
-            font-size: 34px;
-        }
-    }
-
-    p {
-        margin: 10px auto;
-        text-indent: 25px;
-        line-height: 22px;
-    }
 }
 </style>
