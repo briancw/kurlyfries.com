@@ -175,7 +175,7 @@ const events = [
 
 	.eventsTitle {
 		text-align: center;
-		padding: 25px 0px;
+		padding: 25px 20px;
 		color: #fff;
 	}
 

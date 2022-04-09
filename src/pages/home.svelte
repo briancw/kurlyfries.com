@@ -1,4 +1,5 @@
 <script>
+    import Footer from '../components/footer.svelte'
     import headerImg from '../img/new-trailer.jpg'
     
     let lightboxShow = false
@@ -8,11 +9,14 @@
         {
             src: '/img/operations/new-trailer.jpg',
             double: true,
-            // text: [
-            //     'Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!',
-            //     'Over the past 30 years we\'ve sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.',
-            //     'From our enormous jumbo burritos, to deep fried candy bars and funnel cakes, we have the flexibility to serve the perfect menu at any event.',
-            // ],
+            textTitle: 'The Best in the West',
+            text: [
+                `Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!`,
+                `With our iconic food stands, a flexible crew, and years of experience, we are able to provide concessions for events of any size.`,
+                `If you're interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.`,
+                // `We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).`,
+                // `Daryl is currently serving as the President of the National Independent Concessionaires Association`,
+            ],
         },
         {
             src: '/img/operations/sausage-trailer.jpg',
@@ -35,11 +39,15 @@
         {
             src: '/img/operations/yreka2.jpg',
             double: true,
-            // text: [
-            //     'With a large arrangement of tents and trailers, we are able to serve at anything from state fairs to small festivals.',
-            //     'If you\'re interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.',
-            //     'We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).',
-            // ],
+            textTitle: 'Strong Together',
+            text: [
+                `We strongly support the industry and are members of:`,
+                `The Western Fairs Association`,
+                `Oregon Fair Association`,
+                `National Independent Concessionaires Association (NICA)`,
+                `International Association of Fairs and Expositions (IAFE).`,
+                `Daryl is currently serving as the President of NICA.`,
+            ]
         },
         {
             src: '/img/operations/50ft.png',
@@ -62,18 +70,17 @@
 
 <main>
     <div class="headerSection">
-        <img src={headerImg} class="headerImage" />
+        <!-- <img src={headerImg} class="headerImage" /> -->
         <h1 class="headerTitle">Southern Oregon Food & Beverage</h1>
     </div>
     
-    <div class="homeText">
+    <div class="homeText" style="display: none;">
         <h2>The Best in the West</h2>
         <p>Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!</p>
-        <!-- <p>Over the past 30 years we\'ve sold a wide variety of food, from our signature Fresh Giant Kurly Fries, to our famous Hand Dipped Corn Dogs.</p> -->
         <p>With our iconic food stands, a flexible crew, and years of experience, we are able to provide concessions for events of any size.</p>
         <!-- <p>If you're interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.</p> -->
         <p>We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).</p>
-        <p>Darly is currently serving as the President of the National Independent Concessionaires Association</p>
+        <p>Daryl is currently serving as the President of the National Independent Concessionaires Association</p>
     </div>
 
     <section class="homeGallery">
@@ -82,6 +89,7 @@
                 <img src={image.src} class="galleryItemImage" />
                 {#if image.text}
                 <div class="galleryText">
+                    <h2 class="galleryTextTitle">{image.textTitle}</h2>
                     {#each image.text as text}
                         <p>{text}</p>
                     {/each}
@@ -99,18 +107,19 @@
         </div>
     </div>
 </main>
+<Footer />
 
 <style lang="less">
 .headerSection {
     display: block;
-    min-height: 80%;
+    height: 95vh;
     position: relative;
-    max-height: 90vh;
+    background-image: url('/img/new-trailer.jpg');
+    background-size: cover;
+    background-position-x: center;
 
-    .headerImage {
-        width: 100%;
-        min-height: 80%;
-        display: block;
+    @media screen and (max-width: 720px) {
+        height: calc(95vh - 110px);
     }
 
     .headerTitle {
@@ -120,22 +129,28 @@
         text-align: center;
         color: #fff;
         width: 100%;
-        font-size: 5vw;
+        font-size: 5.5vw;
+        padding: 0px 20px;
         text-shadow: 6px 6px 10px #000;
+
+        @media screen and (max-width: 720px) {
+            font-size: 10vw;
+            padding: 0px 20px;
+        }
     }
 }
 
-.homeText {
-    background-color: #02213c;
-    padding: 50px;
-    line-height: 2em;
-    font-size: 1.5em;
-    color: #fff;
+// .homeText {
+//     background-color: #02213c;
+//     padding: 50px;
+//     line-height: 2em;
+//     font-size: 1.5em;
+//     color: #fff;
 
-    h2 {
-        text-align: center;
-    }
-}
+//     h2 {
+//         text-align: center;
+//     }
+// }
 
 .homeGallery {
     display: grid;
@@ -160,6 +175,11 @@
         &.double {
             grid-column: span 2;
             grid-row: span 2;
+
+            @media screen and (max-width: 1024px) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
         }
         
         &:hover {
@@ -189,16 +209,31 @@
             height: 100%;
             z-index: 100;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10%;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5%;
             font-size: 24px;
+
+            p {
+                margin-bottom: 15px;
+            }
 
             @media screen and (max-width: 1024px) {
                 font-size: 18px;
             }
 
             @media screen and (max-width: 720px) {
-                padding: 5%;
+                padding: 15px;
+                line-height: 1.4em;
+            }
+
+            .galleryTextTitle {
+                text-align: center;
+                font-size: 36px;
+
+                @media screen and (max-width: 720px) {
+                    padding: 10px 0px;
+                    font-size: 28px;
+                }
             }
         }
         
@@ -231,8 +266,9 @@
     }
 
     .lightboxInner {
-        position: absolute;
-        width: 90%;
+        position: fixed;
+        max-width: 90vw;
+        max-height: 90vh;
         outline: 10px solid #fff;
         top: 50%;
         left: 50%;

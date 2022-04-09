@@ -1,4 +1,6 @@
 <script>
+    import Footer from '../components/footer.svelte'
+
     let lightboxShow = false
     let lightboxImage = ''
 
@@ -70,7 +72,9 @@
             <div class="closeButton">x</div>
         </div>
     </div>
+
 </main>
+<Footer />
 
 <style lang="less">
 .galleryPage {
@@ -151,12 +155,18 @@
     }
 
     .lightboxInner {
-        position: absolute;
-        width: 90%;
-        border: 10px solid #fff;
+        position: fixed;
+        max-width: 90vw;
+        max-height: 90vh;
+        outline: 10px solid #fff;
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
+
+        @media screen and (max-width: 1024px) {
+            width: 95%;
+            outline-width: 5px;
+        }
         
         .lightboxImage {
             width: 100%;

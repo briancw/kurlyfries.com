@@ -16,40 +16,35 @@
 </script>
 
 <GoogleAnalytics properties={['UA-28431964-4']} />
-<main>
-    <div class="page_wrapper">
-        <Menu />
-        <div class="content_wrapper">
-            <Router>
-                <Route path="/">
-                    <HomePage />
-                </Route>
-                <Route path="/gallery">
-                    <GalleryPage />
-                </Route>
-                <Route path="/contact">
-                    <ContactPage />
-                </Route>
-                <Route path="/events">
-                    <EventsPage />
-                </Route>
-                <Route path="/menus">
-                    <MenusPage />
-                </Route>
-                <Route path="/recommendations">
-                    <RecommendationsPage />
-                </Route>
-                <Route path="/affiliates">
-                    <AffiliatesPage />
-                </Route>
-                <Route>
-                    <FourOhFourPage />
-                </Route>
-            </Router>
-        </div>
-
-    </div>
-</main>
+<Menu />
+<div class="pageWrapper">
+    <Router>
+        <Route path="/">
+            <HomePage />
+        </Route>
+        <Route path="/gallery">
+            <GalleryPage />
+        </Route>
+        <Route path="/contact">
+            <ContactPage />
+        </Route>
+        <Route path="/events">
+            <EventsPage />
+        </Route>
+        <Route path="/menus">
+            <MenusPage />
+        </Route>
+        <Route path="/recommendations">
+            <RecommendationsPage />
+        </Route>
+        <Route path="/affiliates">
+            <AffiliatesPage />
+        </Route>
+        <Route>
+            <FourOhFourPage />
+        </Route>
+    </Router>
+</div>
 
 <style lang="less">
 :global(body) {
