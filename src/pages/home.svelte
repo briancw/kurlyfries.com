@@ -6,7 +6,7 @@
 
     const images = [
         {
-            src: '/img/operations/new-trailer.jpg',
+            src: '/img/operations/newTrailer.jpg',
             alt: `Sofab's main food trailer`,
             double: true,
             textTitle: 'The Best in the West',
@@ -17,22 +17,22 @@
             ],
         },
         {
-            src: '/img/operations/sausage-trailer.jpg',
+            src: '/img/operations/darylAndKristen.jpg',
         },
         {
-            src: '/img/operations/red_crew.jpg',
+            src: '/img/operations/redCrew.jpg',
         },
         {
-            src: '/img/operations/corndog-trailer.jpg',
+            src: '/img/operations/corndogTrailer.jpg',
         },
         {
             src: '/img/operations/yreka.jpg',
         },
         {
-            src: '/img/operations/deschutes.jpg',
+            src: '/img/operations/newSausageTrailer.jpg',
         },
         {
-            src: '/img/operations/kurly-fries.jpg',
+            src: '/img/operations/kurlyFries.jpg',
         },
         {
             src: '/img/operations/yreka2.jpg',
@@ -51,7 +51,7 @@
             src: '/img/operations/50ft.png',
         },
         {
-            src: '/img/operations/gus_daryl.jpg',
+            src: '/img/operations/gusDaryl.jpg',
         },
     ]
 

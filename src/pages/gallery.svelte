@@ -6,18 +6,22 @@
 
     const images = [
         {
-            src: '/img/operations/new-trailer.jpg',
-            alt: '',
-            // double: true,
+            src: '/img/operations/newSausageTrailer.jpg',
         },
         {
-            src: '/img/operations/sausage-trailer.jpg',
+            src: '/img/operations/newTrailer.jpg',
         },
         {
-            src: '/img/operations/red_crew.jpg',
+            src: '/img/operations/darylAndKristen.jpg',
         },
         {
-            src: '/img/operations/corndog-trailer.jpg',
+            src: '/img/operations/sausageTrailer.jpg',
+        },
+        {
+            src: '/img/operations/redCrew.jpg',
+        },
+        {
+            src: '/img/operations/corndogTrailer.jpg',
         },
         {
             src: '/img/operations/yreka.jpg',
@@ -26,17 +30,31 @@
             src: '/img/operations/deschutes.jpg',
         },
         {
-            src: '/img/operations/kurly-fries.jpg',
+            src: '/img/operations/kurlyFries.jpg',
         },
         {
             src: '/img/operations/yreka2.jpg',
-            // double: true,
         },
         {
             src: '/img/operations/50ft.png',
         },
         {
-            src: '/img/operations/gus_daryl.jpg',
+            src: '/img/operations/gusDaryl.jpg',
+        },
+        {
+            src: '/img/operations/weddingParty.jpg',
+        },
+        {
+            src: '/img/operations/wedding.jpg',
+        },
+        {
+            src: '/img/operations/sausageTrailer.jpg',
+        },
+        {
+            src: '/img/operations/sausage.jpg',
+        },
+        {
+            src: '/img/operations/newSausageTrailerInside.jpg',
         },
     ]
 
