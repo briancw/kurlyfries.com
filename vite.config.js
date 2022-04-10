@@ -19,5 +19,7 @@ export default defineConfig({
         outDir: resolve('./dist/'),
         emptyOutDir: true,
     },
-    optimizeDeps: {exclude: ['svelte-navigator']},
+    optimizeDeps: {
+        exclude: ['svelte-navigator'],
+    },
 })

@@ -1,3 +1,7 @@
+<script>
+import Footer from '../components/footer.svelte'
+</script>
+
 <main class="ohNo">
     <div>
         <h1>Error 404</h1>

@@ -1,6 +1,5 @@
 <script>
     import Footer from '../components/footer.svelte'
-    import headerImg from '../img/new-trailer.jpg'
     
     let lightboxShow = false
     let lightboxImage = ''
@@ -8,14 +7,13 @@
     const images = [
         {
             src: '/img/operations/new-trailer.jpg',
+            alt: `Sofab's main food trailer`,
             double: true,
             textTitle: 'The Best in the West',
             text: [
                 `Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!`,
                 `With our iconic food stands, a flexible crew, and years of experience, we are able to provide concessions for events of any size.`,
                 `If you're interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.`,
-                // `We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).`,
-                // `Daryl is currently serving as the President of the National Independent Concessionaires Association`,
             ],
         },
         {
@@ -47,7 +45,7 @@
                 `National Independent Concessionaires Association (NICA)`,
                 `International Association of Fairs and Expositions (IAFE).`,
                 `Daryl is currently serving as the President of NICA.`,
-            ]
+            ],
         },
         {
             src: '/img/operations/50ft.png',
@@ -58,7 +56,6 @@
     ]
 
     function lightbox(img) {
-        console.log(img)
         lightboxImage = img
         lightboxShow = true
     }
@@ -70,7 +67,6 @@
 
 <main>
     <div class="headerSection">
-        <!-- <img src={headerImg} class="headerImage" /> -->
         <h1 class="headerTitle">Southern Oregon Food & Beverage</h1>
     </div>
     
@@ -86,7 +82,7 @@
     <section class="homeGallery">
         {#each images as image, imageIndex}
             <div class="galleryItem" class:double={image.double} on:click={() => lightbox(image.src)}>
-                <img src={image.src} class="galleryItemImage" />
+                <img src={image.src} alt={image.alt || 'operation image'} class="galleryItemImage" />
                 {#if image.text}
                 <div class="galleryText">
                     <h2 class="galleryTextTitle">{image.textTitle}</h2>
@@ -101,7 +97,7 @@
 
     <div class="lightbox" class:show={lightboxShow} on:click|stopPropagation={lightboxHide}>
         <div class="lightboxInner">
-            <img src={lightboxImage} class="lightboxImage" />
+            <img src={lightboxImage} alt="lighbot zoomed" class="lightboxImage" />
             <div class="closeButton">x</div>
             <a href={lightboxImage} target="__blank" class="fullscreenButton">View Fullscreen >></a>
         </div>

@@ -8,7 +8,10 @@
 	<div class="recommendation">
 		<h3>Cliff Munson</h3>
 		<!-- <h3>January 2011</h3> -->
-		<p>Southern Oregon Food & Beverage (SOFAB) is one of our most treasured professional concessionaires. 2010 was my first fair as CEO here in Yreka and I can say that Daryl went out of his way to help me, both learn about fair concessions and by showing me what a true partnership is for our fair.</p>
+		<p>
+			<img src="/img/recommendations/cliffmunson.jpg" alt="Cliff Munson" width="400" style="float: right; margin: 0px 10px 10px;" />
+			Southern Oregon Food & Beverage (SOFAB) is one of our most treasured professional concessionaires. 2010 was my first fair as CEO here in Yreka and I can say that Daryl went out of his way to help me, both learn about fair concessions and by showing me what a true partnership is for our fair.
+		</p>
 		<p>We host a partnership get together on opening night of the fair with food and drink provided. SOFAB graciously donates most of the food for that event. Daryl and his staff are real ambassadors for our fair and we appreciate that. It is really rewarding when fair surveys mention food concessions in a positive way and the Whicheloe crew get many positive comments for their service and product.</p>
 		<p>The SOFAB crew is always polite and work hard to make the fair a place where everyone can make a memory. the concession and staff are always clean and food is great, have you ever had a better curly fry? I know that Southern Oregon Food & Beverage has become part of the fair experience at the Siskiyou Golden Fair and I hope the tradition continues for many years to come.</p>
 		<p>I highly recommend Southern Oregon Food & Beverage as a concession for any event that needs a professional concessionaire.</p>

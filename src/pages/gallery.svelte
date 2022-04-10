@@ -7,6 +7,7 @@
     const images = [
         {
             src: '/img/operations/new-trailer.jpg',
+            alt: '',
             // double: true,
         },
         {
@@ -40,7 +41,6 @@
     ]
 
     function lightbox(img) {
-        console.log(img)
         lightboxImage = img
         lightboxShow = true
     }
@@ -54,7 +54,7 @@
     <section class="homeGallery">
         {#each images as image, imageIndex}
             <div class="galleryItem" class:double={image.double} on:click={() => lightbox(image.src)}>
-                <img src={image.src} class="galleryItemImage" />
+                <img src={image.src} alt={image.alt || 'operation image'} class="galleryItemImage" />
                 {#if image.text}
                 <div class="galleryText">
                     {#each image.text as text}
@@ -68,7 +68,7 @@
 
     <div class="lightbox" class:show={lightboxShow} on:click|stopPropagation={lightboxHide}>
         <div class="lightboxInner">
-            <img src={lightboxImage} class="lightboxImage" />
+            <img src={lightboxImage} alt="lightbox zoom" class="lightboxImage" />
             <div class="closeButton">x</div>
         </div>
     </div>
