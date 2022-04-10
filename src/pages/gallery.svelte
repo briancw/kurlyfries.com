@@ -15,6 +15,15 @@
             src: '/img/operations/darylAndKristen.jpg',
         },
         {
+            src: '/img/operations/darylAndAlaina.jpg',
+        },
+        {
+            src: '/img/operations/alaina.jpg',
+        },
+        {
+            src: '/img/operations/oakland.jpg',
+        },
+        {
             src: '/img/operations/sausageTrailer.jpg',
         },
         {
@@ -55,6 +64,9 @@
         },
         {
             src: '/img/operations/newSausageTrailerInside.jpg',
+        },
+        {
+            src: '/img/operations/oakland2.jpg',
         },
     ]
 
@@ -104,6 +116,10 @@
 .homeGallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+
+    @media screen and (max-width: 720px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .galleryItem {
         // min-height: 300px;

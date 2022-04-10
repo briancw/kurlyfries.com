@@ -51,7 +51,7 @@
             src: '/img/operations/50ft.png',
         },
         {
-            src: '/img/operations/gusDaryl.jpg',
+            src: '/img/operations/alaina.jpg',
         },
     ]
 
