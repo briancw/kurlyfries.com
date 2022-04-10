@@ -78,7 +78,9 @@
 
 <style lang="less">
 .galleryPage {
-    margin-top: 50px;
+    @media screen and (min-width: 720px) {
+        margin-top: 50px;
+    }
 }
 
 .homeGallery {

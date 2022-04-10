@@ -1,34 +1,41 @@
 <script>
+import Footer from '../components/footer.svelte'
 const events = [
-    // {
-    //     name: 'Red Bluff Bull Sale',
-    //     website: 'http://www.redbluffbullsale.com/',
-    //     websiteDisplay: 'redbluffbullsale.com',
-    //     date: '',
-    // },
-    // {
-    //     name: 'Norcal Boat Sport & RV Show',
-    //     website: 'http://www.norcalsportshow.com/',
-    //     websiteDisplay: 'norcalsportshow.com',
-    //     date: '',
-    // },
-    // {
-    //     name: 'Jackson County Sportsmen\'s & Outdoor Recreation Show',
-    //     website: 'http://www.exposureshows.com/our-shows/medford.html',
-    //     websiteDisplay: 'exposureshows.com',
-    //     date: '',
-    // },
-    // {
-    //     name: 'Yreka Sportsman Show',
-    //     website: 'http://www.sisqfair.com/',
-    //     websiteDisplay: 'sisqfair.com',
-    //     date: '',
-    // },
+    {
+        name: 'Red Bluff Bull Sale',
+        website: 'http://www.redbluffbullsale.com/',
+        websiteDisplay: 'redbluffbullsale.com',
+        date: '',
+    },
+    {
+        name: 'Norcal Boat Sport & RV Show',
+        website: 'http://www.norcalsportshow.com/',
+        websiteDisplay: 'norcalsportshow.com',
+        date: '',
+    },
+    {
+        name: 'Jackson County Sportsmen\'s & Outdoor Recreation Show',
+        website: 'http://www.exposureshows.com/our-shows/medford.html',
+        websiteDisplay: 'exposureshows.com',
+        date: '',
+    },
+    {
+        name: 'Yreka Sportsman Show',
+        website: 'http://www.sisqfair.com/',
+        websiteDisplay: 'sisqfair.com',
+        date: '',
+    },
     {
         name: 'Red Bluff Rodeo',
         website: 'https://www.redbluffroundup.com/',
         websiteDisplay: 'RedBluffRoundup.com',
         date: 'April 15th to April 17th',
+    },
+    {
+        name: 'Cottonwood Rodeo',
+        website: '',
+        websiteDisplay: '',
+        date: '',
     },
     {
         name: 'Redding Rodeo',
@@ -48,12 +55,12 @@ const events = [
         websiteDisplay: 'ShastaDistrictFairAndEventCenter.com',
         date: '',
     },
-    // {
-    //     name: 'Mt. Shasta 4th of July Celebration',
-    //     website: 'http://www.mtshastarunners.com/',
-    //     websiteDisplay: 'mtshastarunners.com',
-    //     date: '',
-    // },
+    {
+        name: 'Mt. Shasta 4th of July Celebration',
+        website: 'http://www.mtshastarunners.com/',
+        websiteDisplay: 'mtshastarunners.com',
+        date: '',
+    },
     {
         name: 'Crescent City 4th of July Celebration',
         website: 'http://www.delnorte.org/event/annual-4th-of-july-event/',
@@ -78,12 +85,12 @@ const events = [
         websiteDisplay: 'DNFair.org',
         date: '',
     },
-    // {
-    //     name: 'Yamhill County Fair',
-    //     website: 'http://www.co.yamhill.or.us/fair/',
-    //     websiteDisplay: 'co.yamhill.or.us',
-    //     date: '',
-    // },
+    {
+        name: 'Yamhill County Fair',
+        website: 'http://www.co.yamhill.or.us/fair/',
+        websiteDisplay: 'co.yamhill.or.us',
+        date: '',
+    },
     {
         name: 'Siskiyou Golden Fair',
         website: 'http://www.sisqfair.com/',
@@ -102,12 +109,12 @@ const events = [
         websiteDisplay: 'JosephineCountyFairgrounds.com',
         date: '',
     },
-    // {
-    //     name: 'Lake County Fair',
-    //     website: 'http://www.lakecountyfair.com/',
-    //     websiteDisplay: 'lakecountyfair.com',
-    //     date: '',
-    // },
+    {
+        name: 'Lake County Fair',
+        website: 'http://www.lakecountyfair.com/',
+        websiteDisplay: 'LakeCountyfair.com',
+        date: '',
+    },
     {
         name: 'Inter Mountain Fair',
         website: 'http://www.inter-mountainfair.com/',
@@ -152,26 +159,31 @@ const events = [
 
 	<div class="events">
 		{#each events as event}
-		<div class="event">
-			<div class="eventName">
-				{event.name}
-			</div>
-			{#if event.date}
-			<div class="eventDate">
-				{event.date}
-			</div>
-			{/if}
-			<a target="_blank" href={event.website} class="eventLink">
-				{event.websiteDisplay}
-			</a>
-		</div>
+            <div class="event">
+                <div class="eventName">
+                    {event.name}
+                </div>
+                {#if event.date}
+                <div class="eventDate">
+                    {event.date}
+                </div>
+                {/if}
+                <a target="_blank" href={event.website} class="eventLink">
+                    {event.websiteDisplay}
+                </a>
+            </div>
 		{/each}
 	</div>
 </main>
+<Footer />
 
 <style lang="less">
 .eventsPage {
-    margin-top: 50px;
+    padding-bottom: 50px;
+
+    @media screen and (min-width: 720px) {
+        margin-top: 50px;
+    }
 
 	.eventsTitle {
 		text-align: center;
@@ -181,9 +193,8 @@ const events = [
 
 	.events {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		column-gap: 5%;
-		row-gap: 10%;
 		width: 80%;
 		margin: 0px auto;
 
@@ -192,8 +203,31 @@ const events = [
 			width: 90%;
 		}
 
+        @media screen and (max-width: 720px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        // Clear fix
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
 		.event {
 			color: #fff;
+            height: 150px;      
+            position: relative;
+            
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 10px;
+            }
 
 			.eventName {
 				font-size: 20px;
@@ -205,6 +239,8 @@ const events = [
 			.eventLink {
 				color: #fff;
 				font-size: 12px;
+                position: absolute;
+                top: 80px;
 			}
 		}
 	}

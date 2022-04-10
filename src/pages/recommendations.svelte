@@ -1,5 +1,9 @@
+<script>
+	import Footer from '../components/footer.svelte'
+</script>
+
 <main class="recommendationsPage">
-	<!-- <h1>Recommendations</h1> -->
+	<h2>A few kind words from Fair Managers we have worked with throughout the years</h2>
 
 	<div class="recommendation">
 		<h3>Cliff Munson</h3>
@@ -53,20 +57,31 @@
 		Redmond Oregon</p>
 	</div>
 </main>
+<Footer />
 
 <style lang="less">
 .recommendationsPage {
-	margin-top: 50px;
 	color: #fff;
+	padding: 30px;
+	
+	@media screen and (min-width: 720px) {
+		margin-top: 50px;
+	}
+
+	h2 {
+		text-align: center;
+		margin-bottom: 30px;
+	}
 
 	.divider {
 		height: 1px;
 		background-color: #fff;
 		width: 90%;
-		margin: 0px auto;
+		margin: 0px auto 50px;
 	}
+
 	.recommendation {
-		padding: 50px 20px;
+		padding-bottom: 50px;
 	}
 }
 </style>
