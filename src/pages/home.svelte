@@ -1,6 +1,6 @@
 <script>
     import Footer from '../components/footer.svelte'
-    
+
     let lightboxShow = false
     let lightboxImage = ''
 
@@ -69,15 +69,6 @@
     <div class="headerSection">
         <h1 class="headerTitle">Southern Oregon Food & Beverage</h1>
     </div>
-    
-    <div class="homeText" style="display: none;">
-        <h2>The Best in the West</h2>
-        <p>Southern Oregon Food & Beverage is the finest provider of fair food in Southern Oregon and Northern California. With over 30 years of experience, our hard working team provides great food at a great price!</p>
-        <p>With our iconic food stands, a flexible crew, and years of experience, we are able to provide concessions for events of any size.</p>
-        <!-- <p>If you're interested in having us serve at your event you can contact us in a variety of ways from our Contact Page.</p> -->
-        <p>We strongly support the industry and are members of Western Fairs Association, Oregon Fair Association, National Independent Concessionaires Association (NICA), and International Association of Fairs and Expositions (IAFE).</p>
-        <p>Daryl is currently serving as the President of the National Independent Concessionaires Association</p>
-    </div>
 
     <section class="homeGallery">
         {#each images as image, imageIndex}
@@ -110,7 +101,7 @@
     display: block;
     height: 95vh;
     position: relative;
-    background-image: url('/img/new-trailer.jpg');
+    background-image: url('/img/header.jpg');
     background-size: cover;
     background-position-x: center;
 
@@ -135,18 +126,6 @@
         }
     }
 }
-
-// .homeText {
-//     background-color: #02213c;
-//     padding: 50px;
-//     line-height: 2em;
-//     font-size: 1.5em;
-//     color: #fff;
-
-//     h2 {
-//         text-align: center;
-//     }
-// }
 
 .homeGallery {
     display: grid;
