@@ -55,12 +55,19 @@
         },
     ]
 
+    /**
+     * @function lightbox Show a lightbox containing the passed in image
+     * @param {string} img Path to the image to show
+     */
     function lightbox(img) {
         lightboxImage = img
         lightboxShow = true
     }
 
-    function lightboxHide(e) {
+    /**
+     * @function lightboxHide Hide the currently visible lightbox
+     */
+    function lightboxHide() {
         lightboxShow = false
     }
 </script>
@@ -101,7 +108,7 @@
     display: block;
     height: 95vh;
     position: relative;
-    background-image: url('/img/header.jpg');
+    background-image: url('../img/header.jpg');
     background-size: cover;
     background-position-x: center;
 

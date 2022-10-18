@@ -168,7 +168,7 @@ const events = [
                     {event.date}
                 </div>
                 {/if}
-                <a target="_blank" href={event.website} class="eventLink">
+                <a target="_blank" rel="noreferrer" href={event.website} class="eventLink">
                     {event.websiteDisplay}
                 </a>
             </div>
