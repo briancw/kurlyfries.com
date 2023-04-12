@@ -59,7 +59,7 @@
      * @function lightbox Show a lightbox containing the passed in image
      * @param {string} img Path to the image to show
      */
-    function lightbox(img) {
+    const lightbox = (img) => {
         lightboxImage = img
         lightboxShow = true
     }
@@ -67,7 +67,7 @@
     /**
      * @function lightboxHide Hide the currently visible lightbox
      */
-    function lightboxHide() {
+    const lightboxHide = () => {
         lightboxShow = false
     }
 </script>
