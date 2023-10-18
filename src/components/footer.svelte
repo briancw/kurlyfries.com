@@ -5,7 +5,7 @@
         </div>
         <div class="footerText">
             Phone: (541) 941 - 9660<br>
-            Email: darly@kurlyfries.com
+            Email: daryl@kurlyfries.com
         </div>
     </div>
 </footer>
