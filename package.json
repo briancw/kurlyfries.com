@@ -1,28 +1,38 @@
 {
-    "name": "kurlyfries.com",
-    "version": "2.0.0",
-    "description": "Kurlyfries.com",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "preview": "vite preview --port=3009",
-        "lint": "eslint ."
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@beyonk/svelte-google-analytics": "^2.6.4",
-        "@sveltejs/vite-plugin-svelte": "^2.0.4",
-        "eslint": "^8.38.0",
-        "eslint-config-brian": "^1.0.19",
-        "eslint-plugin-svelte3": "^4.0.0",
-        "less": "^4.1.3",
-        "svelte": "^3.58.0",
-        "svelte-navigator": "^3.2.2",
-        "svelte-preprocess": "^5.0.3",
-        "vite": "^4.2.1"
-    }
+  "name": "kurlyfries.com",
+  "version": "3.0.0",
+  "description": "Southern Oregon Food & Beverage",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^22.13.0 || >=24.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --port=3009",
+    "lint": "eslint .",
+    "typecheck": "vue-tsc --noEmit"
+  },
+  "dependencies": {
+    "reka-ui": "^2.11.0",
+    "vue": "^3.5.45",
+    "vue-router": "^5.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "eslint": "^10.14.0",
+    "eslint-plugin-vue": "^10.12.1",
+    "globals": "^17.14.0",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.2",
+    "vite": "^8.3.8",
+    "vue-tsc": "^3.3.14"
+  },
+  "overrides": {
+    "minimatch": "^11.0.8"
+  }
 }
