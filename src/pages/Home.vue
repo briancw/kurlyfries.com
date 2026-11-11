@@ -25,8 +25,8 @@ const images: GalleryImage[] = [
     alt: 'The SOFAB crew in red shirts',
   },
   {
-    src: '/img/operations/corndogTrailer.jpg',
-    alt: 'Corn dog trailer',
+    src: '/img/operations/gusDaryl.jpg',
+    alt: 'Gus and Daryl',
   },
   {
     src: '/img/operations/yreka.jpg',
@@ -51,7 +51,7 @@ const images: GalleryImage[] = [
       `Oregon Fair Association`,
       `National Independent Concessionaires Association (NICA)`,
       `International Association of Fairs and Expositions (IAFE).`,
-      `Daryl is currently serving as the President of NICA.`,
+      `Daryl previously served as the President of NICA.`,
     ],
   },
   {

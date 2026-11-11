@@ -37,10 +37,6 @@ const images: GalleryImage[] = [
     alt: 'The SOFAB crew in red shirts',
   },
   {
-    src: '/img/operations/corndogTrailer.jpg',
-    alt: 'Corn dog trailer',
-  },
-  {
     src: '/img/operations/yreka.jpg',
     alt: 'SOFAB concessions in Yreka',
   },

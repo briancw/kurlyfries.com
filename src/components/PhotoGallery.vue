@@ -27,7 +27,7 @@ withDefaults(defineProps<{
   >
     <DialogRoot v-for="(image, index) in images" :key="`${image.src}-${index}`">
       <DialogTrigger
-        class="group relative isolate block w-full cursor-pointer overflow-hidden text-left select-none after:pointer-events-none after:absolute after:inset-0 after:z-[1] after:shadow-[inset_0_0_10px_0_#000] focus-visible:z-10 focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-yellow-300"
+        class="group relative isolate block w-full cursor-pointer overflow-hidden text-left select-none after:pointer-events-none after:absolute after:inset-0 after:z-1 after:shadow-[inset_0_0_10px_0_#000] focus-visible:z-10 focus-visible:outline-4 focus-visible:-outline-offset-4 focus-visible:outline-yellow-300"
         :class="[
           image.double && home ? 'min-[1025px]:col-span-2 min-[1025px]:row-span-2' : '',
           image.text ? 'min-h-fit min-[721px]:aspect-square' : 'aspect-square',
@@ -43,7 +43,7 @@ withDefaults(defineProps<{
         />
         <div
           v-if="image.text"
-          class="relative z-[2] min-h-full bg-black/60 p-[15px] text-[18px] leading-[1.4] text-white min-[721px]:p-[5%] min-[721px]:leading-normal min-[1025px]:text-[24px]"
+          class="relative z-2 min-h-full bg-black/60 p-[15px] text-[18px] leading-[1.4] text-white min-[721px]:p-[5%] min-[721px]:leading-normal min-[1025px]:text-[24px]"
         >
           <h2 class="py-[10px] text-center text-[28px] font-bold min-[721px]:py-0 min-[721px]:text-[36px]">
             {{ image.textTitle }}
@@ -52,9 +52,9 @@ withDefaults(defineProps<{
         </div>
       </DialogTrigger>
       <DialogPortal>
-        <DialogOverlay class="fixed inset-0 z-[500] bg-black/50" />
+        <DialogOverlay class="fixed inset-0 z-500 bg-black/50" />
         <DialogContent
-          class="fixed top-1/2 left-1/2 z-[501] w-max max-w-[90vw] -translate-x-1/2 -translate-y-1/2 bg-white outline-[5px] outline-white min-[1025px]:outline-[10px]"
+          class="fixed top-1/2 left-1/2 z-501 w-max max-w-[90vw] -translate-x-1/2 -translate-y-1/2 bg-white outline-[5px] outline-white min-[1025px]:outline-[10px]"
         >
           <DialogTitle class="sr-only">{{ image.alt }}</DialogTitle>
           <DialogDescription class="sr-only"
