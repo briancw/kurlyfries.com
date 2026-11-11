@@ -57,12 +57,6 @@ const events = [
     date: '',
   },
   {
-    name: 'Mt. Shasta 4th of July Celebration',
-    website: 'http://www.mtshastarunners.com/',
-    websiteDisplay: 'mtshastarunners.com',
-    date: '',
-  },
-  {
     name: 'Crescent City 4th of July Celebration',
     website: 'http://www.delnorte.org/event/annual-4th-of-july-event/',
     websiteDisplay: 'delnorte.org',
@@ -87,12 +81,6 @@ const events = [
     date: '',
   },
   {
-    name: 'Yamhill County Fair',
-    website: 'http://www.co.yamhill.or.us/fair/',
-    websiteDisplay: 'co.yamhill.or.us',
-    date: '',
-  },
-  {
     name: 'Siskiyou Golden Fair',
     website: 'http://www.sisqfair.com/',
     websiteDisplay: 'sisqfair.com',
@@ -102,18 +90,6 @@ const events = [
     name: 'Humboldt County Fair',
     website: 'http://www.humboldtcountyfair.org/',
     websiteDisplay: 'HumboldtCountyFair.org',
-    date: '',
-  },
-  {
-    name: 'Josephine County Fair',
-    website: 'https://www.josephinecountyfairgrounds.com/',
-    websiteDisplay: 'JosephineCountyFairgrounds.com',
-    date: '',
-  },
-  {
-    name: 'Lake County Fair',
-    website: 'http://www.lakecountyfair.com/',
-    websiteDisplay: 'LakeCountyfair.com',
     date: '',
   },
   {
@@ -144,12 +120,6 @@ const events = [
     name: 'Central Washington State Fair',
     website: 'https://www.statefairpark.org/',
     websiteDisplay: 'StateFairPark.org',
-    date: '',
-  },
-  {
-    name: 'River Banks Wine & Cheese Festival',
-    website: 'http://www.riverbankcheeseandwine.org/',
-    websiteDisplay: 'riverbankcheeseandwine.org',
     date: '',
   },
 ]
